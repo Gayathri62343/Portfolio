@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/yPPxY_4p3FKOH536f-bDdEkLyJzfWXYm1vTvgoPwswLJdsOdHrPpdKN_IKQeyXxSgiNv=w480-h960-rw">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        .container{
+            margin:2% 2%;
+        }
+        nav{
+            margin-top: -2%;
+            width: 100%;
+            position: fixed;
+            background-color: antiquewhite;
+            z-index: 1000;
+        }
+        .right{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1%;
+        }
+        .right h1{
+            font-size: 30px;
+            display: inline;
+            
+        }
+        .web{
+            margin:0px 2%;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        li{
+            margin:0px 20px;
+            display: inline;
+        }
+        a{
+            width: fit-content;
+            height: fit-content;
+            border:2px solid black;
+            text-decoration: none;
+            font-size: 30px;
+            padding: 2px;
+            color: black;
+        }
+        a:active {
+            color: black;
+        }
+        #home{
+            width:100%;
+            height:900px;
+            border:2px solid black;
+            background: linear-gradient(rgba(5, 142, 154, 0.73)),url("images/gayu.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #home a{
+            margin-top: 20px;
+        }
+        #home h1{
+            margin-top: 30%;
+            text-align: center;
+            font-size: 100px;
+        }
+        #home h2{
+            margin-top: -3%;
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        #about{
+            text-align: justify;
+            display: flex;
+            justify-content: space-between;
+        }
+        #home,#aboutme,#education,#skills,#projects,#certifications{
+            scroll-margin-top: 100px;
+        }
+        #about p{
+            width: 46%;
+            height: 550px;
+            border:2px solid black;
+            margin-top: -0px;
+            padding:1px;
+            font-size: x-large;
+        }
+        #aboutme h1{
+            text-align: center;
+        }
+        #about img{
+            width:48%;
+            height:550px;
+            border: 2px solid black;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            object-position: top;
+        } 
+       
+         /* General layout */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.info-box {
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
+}
+
+/* LinkedIn & GitHub bigger icons */
+.info-box.linkedin i,
+.info-box.github i {
+  font-size: 1.8rem;
+}
+
+/* Individual colors + hover */
+.info-box.phone {
+  background: #b6dae5;
+  color: #1565c0;
+}
+.info-box.phone:hover {
+  background: #d59ae7;
+  color: #fff;
+}
+
+.info-box.email {
+  background: #b6dae5;
+  color: #1565c0;
+}
+.info-box.email:hover {
+  background: #d59ae7;
+  color: #fff;
+}
+
+.info-box.linkedin {
+  background: #b6dae5;
+  color: #0077b5;
+}
+.info-box.linkedin:hover {
+  background: #d59ae7;
+  color: #fff;
+}
+
+.info-box.github {
+  background: #b6dae5;
+  color: #1565c0;
+}
+.info-box.github:hover {
+  background: #d59ae7;
+  color: #fff;
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 30px auto;
+  width: 85%;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(21, 101, 192, 0.3);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.edu-card i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #1565c0;
+}
+
+.edu-card h2 {
+  margin: 10px 0 5px;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.edu-card p {
+  margin: 5px 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+.edu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  background: #f1f7ff;
+}
+.skills-bars {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.bar {
+  width: 100%;
+  background: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 6px;
+  height: 20px; /* taller bar for % text */
+}
+
+.fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Custom colors and widths */
+.fill.html { width: 90%; background: #e44d26; }       /* HTML/CSS/JS */
+.fill.react { width: 80%; background: #61dbfb; color:#000; } /* React */
+.fill.node { width: 75%; background: #3c873a; }
+.fill.db { width: 50%; background: #f4b400; color:#000; }
+.fill.java { width: 85%; background: #007396; }
+.fill.tools { width: 95%; background: #24292e; }
+/*.fill.uiux { width: 65%; background: #ff4081; }*/
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 30px auto;
+  width: 85%;
+}
+
+.project-card {
+  display: block; /* Make the entire card clickable */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(21, 101, 192, 0.3);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Keep text color */
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.project-card h2 {
+  font-size: 1.3rem;
+  margin: 10px 0 5px;
+  color: #222;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  background: #f1f7ff;
+}
+#certifications {
+  padding: 1px 20px;
+  text-align: center;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;  
+}
+
+.cert-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-card h2 {
+  font-size: 18px;       /* smaller heading */
+  margin: 10px 0;
+  color: #333;           /* adjust if you want */
+  text-align: center;
+}
+
+.cert-card p {
+  font-size: 14px;       /* smaller paragraph text */
+  color: #666;
+  margin: 5px 0 0 0;
+  text-align: center;
+}
+
+.cert-card i {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+.cert-card a {
+  display: block;          /* makes the whole card area clickable */
+  text-decoration: none;   /* removes underline from text */
+  border: none;
+  color: inherit;          /* keeps text color same as parent */
+  height: 100%;            /* ensures it fills the card */
+  width: 100%;
+}
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h1 {
+  font-size: 28px;
+  margin-bottom: 35px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: #333;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contact-icons i {
+  font-size: 36px;
+  background: #f0f0f0;
+  padding: 18px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-icons span {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.contact-icons a:hover {
+  color: #007bff;
+  transform: translateY(-4px);
+}
+
+.contact-icons a:hover i {
+  background: #007bff;
+  color: #fff;
+}
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="right">
+            <a class="web" href="web.html"><strong>GAYATHRI</strong></a>
+            <ul>
+                <li><a href="#home" ><strong>Home</strong></a></li>
+                <li><a href="#aboutme"><strong>About Me</strong></a></li>
+                <li><a href="#education"><strong>Education</strong></a></li>
+                <li><a href="#skills"><strong>Skills</strong></a></li>
+                <li><a href="#projects"><strong>Projects</strong></a></li>
+                <li><a href="#certifications"><strong>Certifications</strong></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+    <div id="home">
+        <h1>Hi , I am Gayathri . </h1>
+        <h2>Web Developer</h2>
+        <a href="images/resume.pdf">Download Resume</a>
+    </div>
+    <div id="aboutme">
+        <h1><strong>About Me</strong></h1>
+    <div id="about">
+        <p>Hello Everyone ! I'm Gayathri C , I am an aspiring software engineer from Coimbatore with a strong foundation in programming, problem-solving, and web development. Currently pursuing my B.Tech in Information Technology at SNS College of Technology with a CGPA of 8.2, I am passionate about building meaningful tech solutions that address real-world problems. I have hands-on experience developing websites using HTML, CSS, and JavaScript, including a food donation platform integrated with Razorpay for payment and Formspree for contact handling.
+
+I have also worked on machine learning projects, such as a Plant Disease Detection System using CNNs trained on the Plant Village dataset. My internship in frontend development at Ether Infotech allowed me to build responsive eCommerce interfaces, enhancing my practical knowledge of modern web technologies.
+
+In addition to my technical skills in Java, C, and tools like GitHub and VS Code, I bring strong soft skills like teamwork, leadership, and time management. I’ve further enriched my learning through workshops in Cyber Security, Machine Learning, and UI/UX. I’m eager to contribute to innovative tech projects and continue growing as a developer.</p>
+         <img src="images/gayu.jpg">
+    </div>
+<div class="contact-info">
+  <div class="info-box phone">
+    <i class="fas fa-phone-alt"></i> +91 7604962168
+  </div>
+  <div class="info-box email">
+    <i class="fas fa-envelope"></i> cgayathri725@gmail.com
+  </div>
+  <div class="info-box linkedin">
+    <a href="https://www.linkedin.com/in/gayathri-c--/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+  <div class="info-box github">
+    <a href="https://github.com/Gayathri62343" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+</div>
+    <div id="education">
+  <h1><strong>Education</strong></h1>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <h2>B.Tech – Information Technology</h2>
+      <p>SNS College of Technology, Coimbatore</p>
+      <p><strong>CGPA:</strong> 8.5 (upto 6th semester)</p>
+      <p><em>Pursuing</em></p>
+    </div>
+    <div class="edu-card">
+      <i class="fa-solid fa-school"></i>
+      <h2>HSC</h2>
+      <p>SVM Higher Secondary School</p>
+      <p><strong>84%</strong></p>
+    </div>
+    <div class="edu-card">
+      <i class="fa-solid fa-book"></i>
+      <h2>SSLC</h2>
+      <p>SVM Higher Secondary School</p>
+      <p><strong>72%</strong></p>
+    </div>
+  </div>
+</div>
+<div id="skills">
+  <center><h1><strong>Skills</strong></h1></center>
+  <div class="skills-bars">
+
+    <div class="skill">
+      <span>HTML / CSS / JavaScript</span>
+      <div class="bar"><div class="fill html">90%</div></div>
+    </div>
+
+    <div class="skill">
+      <span>React.js</span>
+      <div class="bar"><div class="fill react">80%</div></div>
+    </div>
+
+    <div class="skill">
+      <span>Node.js / Express.js</span>
+      <div class="bar"><div class="fill node">75%</div></div>
+    </div>
+
+    <div class="skill">
+      <span>MongoDB / PostgreSQL</span>
+      <div class="bar"><div class="fill db">50%</div></div>
+    </div>
+
+    <div class="skill">
+      <span>Java / C</span>
+      <div class="bar"><div class="fill java">85%</div></div>
+    </div>
+
+    <div class="skill">
+      <span>GitHub / VS Code</span>
+      <div class="bar"><div class="fill tools">95%</div></div>
+    </div>
+
+    
+  </div>
+</div>
+
+<div id="projects">
+  <center><h1><strong>Projects</strong></h1></center>
+  <div class="projects-grid">
+
+    <a href="https://github.com/Gayathri62343/Portfolio" target="_blank" class="project-card">
+      <h2>Portfolio</h2>
+      <p>Designed and developed a personal portfolio website using HTML, CSS, and JavaScript to showcase skills, projects, and achievements in a responsive layout.</p>
+    </a>
+
+    <a href="https://gayathri62343.github.io/Donation/" target="_blank" class="project-card">
+      <h2>Donation Website</h2>
+      <p>Developed a food donation website to connect donors with people in need. Integrated Razorpay API for payments and Formspree for collecting inquiries via contact form.</p>
+    </a>
+
+    <a href="https://github.com/Gayathri62343/MiniMart" target="_blank" class="project-card">
+      <h2>Mini Mart - MERN</h2>
+      <p>Developed a full-stack eCommerce web app with features like user authentication, product catalog, shopping cart, admin panel, RESTful APIs, and MongoDB integration.</p>
+    </a>
+
+  </div>
+</div>
+<div id="certifications">
+  <h1><strong>Certifications</strong></h1>
+  <div class="cert-grid">
+
+    <div class="cert-card">
+      <a href="images/Fundamentals of Artificial Intelligence.pdf" target="_blank">
+      <i class="fa-solid fa-certificate"></i>
+      <h2>Fundamentals of Artificial Intelligence</h2>
+      <p>NPTEL (Score: 71%)</p>
+      </a>
+    </div>
+
+    <div class="cert-card">
+      <a href="images/bit.jpg" target="_blank">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h2>Cyber Security Workshop</h2>
+      <p>BIT College</p>
+      </a>
+    </div>
+
+    <div class="cert-card">
+      <a href="images/cit.jpg" target="_blank">
+      <i class="fa-solid fa-brain"></i>
+      <h2>Machine Learning Workshop</h2>
+      <p>CIT College</p>
+      </a>
+    </div>
+
+    <div class="cert-card">
+      <a href="images/mern.pdf" target="_blank">
+      <i class="fa-solid fa-code"></i>
+      <h2>MERN Stack Workshop</h2>
+      <p>Amypo Technologies</p>
+      </a>
+    </div>
+
+    <div class="cert-card">
+      <a href="images/datascience.pdf" target="_blank">
+      <i class="fa-solid fa-database"></i>
+      <h2>Data Science Workshop</h2>
+      <p>Amypo Technologies</p>
+      </a>
+    </div>
+
+    <div class="cert-card">
+      <a href="images/uiux.pdf" target="_blank">
+      <i class="fa-solid fa-paintbrush"></i>
+      <h2>UI/UX Workshop</h2>
+      <p>Amypo Technologies</p>
+      </a>
+    </div>
+
+  </div>
+</div>
+<div id="contact">
+  <h1><strong>Contact Me</strong></h1>
+  <p class="contact-msg">
+Always open to new ideas, learning, and exciting opportunities. Drop me a message!
+</p>
+
+  <div class="contact-icons">
+
+    <a href="tel:+917604962168" target="_blank">
+      <i class="fas fa-phone-alt"></i>
+      <span>Phone</span>
+    </a>
+
+    <a href="mailto:cgayathri725@gmail.com" target="_blank">
+      <i class="fas fa-envelope"></i>
+      <span>Email</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/gayathri-c--/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+
+    <a href="https://github.com/Gayathri62343" target="_blank">
+      <i class="fab fa-github"></i>
+      <span>GitHub</span>
+    </a>
+
+  </div>
+</div>
+
+
+</body>
+</html>
